@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Welcome to the world of tomorrow.</h1>
+<div class="container">
+<h2>{{ game_title }}</h2>
+{% if current_node %}
+{% include "_node.html" %}
+{% endif %}
+</div>
+{% endblock %}

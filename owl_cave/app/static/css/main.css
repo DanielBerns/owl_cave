@@ -1,0 +1,45 @@
+body {
+	background-color: black;
+	color: #00FF00;
+	font-family: monospace;
+	text-align: center;
+}
+button {
+	color: #00FF00;
+	font-family: monospace;
+	font-weight: bold;
+	font-size: 14px;
+	border-color: #00A200;
+	background: linear-gradient(
+		to bottom, 
+		#00B200,
+		#000000 5%,
+		#000000 5%,
+		#00B200
+	);
+	background-size: 100% 2px;
+	padding: 0.5em;
+	margin: 0.5em;
+}
+.button_container {
+	margin-top: 40%;
+}
+.container {
+	margin-left: 15%;
+	margin-right: 15%;
+	margin-top: 10%;
+	padding: 10%;
+	width: 50%;
+	height: 300px!important;
+	border-radius: 100px;
+	border: 0.1em solid green;
+	box-shadow: 0 0 15px 2px;
+	background: linear-gradient(
+		to bottom, 
+		#000000,
+		#313131 50%,
+		#313131 50%,
+		#000000
+	);
+	background-size: 100% 5px;
+}

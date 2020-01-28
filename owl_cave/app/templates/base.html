@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{ title }}</title>
+	<link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+</head>
+<body>
+<div>
+<h2><a href="{{ url_for('index') }}">Overview</a><h2>
+</div>
+<hr />
+{% block content %}{% endblock %}
+</body>

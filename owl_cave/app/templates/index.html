@@ -2,7 +2,9 @@
 
 {% block content %}
 <h1>List of available games: </h1>
+<ul>
 {% for game in games %}
-{$ include "game.html" %}
+<li><a href="{{ url_for('game', game_id=game.name) }}">{{ game.name }}</a></li>
 {% endfor %}
+</ul>
 {% endblock %}

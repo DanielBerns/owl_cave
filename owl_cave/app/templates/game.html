@@ -1,11 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>{{ game.name }}</h1>
+<h1><a href="{{ url_for('game', game_id=game.name) }}">{{ game.name }}</a></h1>
 <div class="container">
-<h2>{{ game.name }}</h2>
-{% if current_node %}
 {% include "_node.html" %}
-{% endif %}
 </div>
 {% endblock %}

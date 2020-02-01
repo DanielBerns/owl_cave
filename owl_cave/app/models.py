@@ -5,6 +5,10 @@ class Game(db.Model):
 	name = db.Column(db.String(128), index=True, unique=True)
 	nodes = db.relationship('Node', backref='game', lazy='dynamic')
 	
+	@property
+	def get_head(self):
+		return Node.query.filter_by(game_id=self.id).first()
+	
 	def __repr__(self):
 		return '<Game {}>'.format(self.name)
 		
@@ -31,4 +35,4 @@ class Node(db.Model):
 	)
 	
 	def __repr__(self):
-		return '<Node {}>'.format(self.text)
+		return '<Node {}>'.format(self.title)

@@ -1,0 +1,12 @@
+{% with node = current_node %}
+<h2>{{ node.title }}</h2>
+<p>
+	{{ node.description }}
+</p>
+<form action="" method="POST" value="xxx">
+	{% for f_node in node.connected_nodes %}
+		{{ form.hidden_tag() }}
+		<input type="submit" name="next_node" value="{{ f_node.trigger }}" />
+	{% endfor %}
+</form>
+{% endwith %}

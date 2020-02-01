@@ -25,8 +25,8 @@ class Node(db.Model):
 	description = db.Column(db.Text)
 	trigger = db.Column(db.String(64))
 	
-	is_head = db.Column(db.Boolean, unique=True)
-	is_tail = db.Column(db.Boolean, unique=True)
+	is_head = db.Column(db.Boolean)
+	is_tail = db.Column(db.Boolean)
 	connected_nodes = db.relationship( \
 		'Node', secondary=node_rels, \
 		primaryjoin=(node_rels.c.parent_node_id == id), \

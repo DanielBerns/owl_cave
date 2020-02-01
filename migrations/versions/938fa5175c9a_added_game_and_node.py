@@ -34,8 +34,6 @@ def upgrade():
     sa.Column('is_tail', sa.Boolean(), nullable=True),
     sa.ForeignKeyConstraint(['game_id'], ['game.id'], ),
     sa.PrimaryKeyConstraint('id'),
-    sa.UniqueConstraint('is_head'),
-    sa.UniqueConstraint('is_tail')
     )
     op.create_table('nodes',
     sa.Column('parent_node_id', sa.Integer(), nullable=True),

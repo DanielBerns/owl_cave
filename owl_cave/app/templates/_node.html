@@ -3,10 +3,12 @@
 <p>
 	{{ node.description }}
 </p>
+<div class=button_container>
 <form action="" method="POST">
 	{{ form.hidden_tag() }}
 	{% for f_node in node.connected_nodes %}
 		<input type="submit" name="next_node" value="{{ f_node.trigger }}" />
 	{% endfor %}
 </form>
+</div>
 {% endwith %}

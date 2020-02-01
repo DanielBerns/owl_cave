@@ -4,8 +4,16 @@ body {
 	font-family: monospace;
 	text-align: center;
 }
-button {
+
+a:link, a:visited, button, input {
 	color: #00FF00;
+}
+
+a:active {
+	color: red;
+}
+
+button, input {
 	font-family: monospace;
 	font-weight: bold;
 	font-size: 14px;
